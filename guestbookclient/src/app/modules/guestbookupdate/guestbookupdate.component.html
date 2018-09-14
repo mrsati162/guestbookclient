@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Guest Form</h1>
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group">
+      <label for="guestname">Guest Name</label>
+      <input type="text" class="form-control" id="guestname" required [(ngModel)]="guestBook.guestName" name="guestname" #guestBook.guestName="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <input type="text" class="form-control" id="comment" [(ngModel)]="guestBook.comment" name="comment" #guestBook.comment="ngModel">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
